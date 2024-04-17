@@ -10,7 +10,7 @@ body {
 .container {
   display: flex;
   justify-content: space-around;
-  margin: 10px;
+  margin: 20px;
 }
 
 .container > div {
@@ -18,6 +18,7 @@ body {
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 ul {
@@ -26,21 +27,68 @@ ul {
 }
 
 li {
-  padding: 10px 0;
+  padding: 12px 0;
   border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 8px 16px;
+  font-size: 14px;
   border: none;
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 4px;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+
+button.remove {
+  background-color: #dc3545;
+}
+
+button.remove:hover {
+  background-color: #c82333;
+}
+
+input[type="text"] {
+  padding: 8px;
+  width: 70%;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #007bff;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-container > * {
+  margin-right: 10px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+
+.rating-container > .rating {
+  color: gold;
+  font-size: 16px;
+  margin-left: 5px;
 }
 
 @media (max-width: 768px) {
@@ -52,5 +100,9 @@ button:hover {
   .container > div {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  input[type="text"] {
+    width: 100%;
   }
 }
